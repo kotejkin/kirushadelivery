@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Добро пожаловать!</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .swiper-container {
+        width: 600px;
+        height: 338px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+        position: relative;
+    }
+    .swiper-wrapper {
+        display: flex;
+    }
+    .swiper-slide {
+        flex: 1 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .swiper-pagination {
+        position: absolute;
+        text-align: center;
+        transition: .3s opacity;
+        transform: translate3d(0,0,0);
+        z-index: 10;
+        bottom: -10px;
+        width: 100%;
+    }
+    .button_1719089702577 {
+        display: inline-block !important;
+        text-decoration: none !important;
+        background-color: #ffffff !important;
+        color: #00ff00 !important;
+        border: 2px solid #00ff00 !important;
+        border-radius: 6px !important;
+        font-size: 18px !important;
+        padding: 4px 20px !important; 
+        transition: all 0.2s ease !important;
+        margin-top: 20px;
+    }
+    .button_1719089702577:hover {
+        text-decoration: none !important; 
+        background-color: #00ff00 !important;
+        color: #ffffff !important;
+        border-color: #00ff00 !important;
+    }
+    #navbar ul {
+        display: none;
+        background-color: #32CD32;
+        position: absolute;
+        top: 100%;
+    }
+    #navbar li:hover ul {
+        display: block;
+    }
+    #navbar, #navbar ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100%; /* Исправление для расширения меню на всю ширину */
+        text-align: center; /* Центрирование элементов меню */
+    }
+    #navbar {
+        height: 30px;
+        background-color: #228B22;
+        padding-left: 25px;
+        min-width: 470px;
+    }
+    #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+    }
+    #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #FFFFFF;
+        text-decoration: none;
+        text-align: center;
+    }
+    #navbar ul li {
+        float: none;
+    }
+    #navbar li:hover {
+        background-color: #32CD32;
+    }
+    #navbar ul li:hover {
+        background-color: #00FF00;
+    }
+</style>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <ul id="navbar">
+        <li><a href="#">Информация</a>
+            <ul>
+                <li><a href="kontakti.html">Контакты - поддержка</a></li>
+                <li><a href="q&a.html">часто задаваемые вопросы</a></li>
+            </ul>
+        </li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="#">Работа</a></li>
+    </ul>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="gatov1.jpg" alt="Image 1"></div>
+            <div class="swiper-slide"><img src="gatov2.jpg" alt="Image 2"></div>
+            <div class="swiper-slide"><img src="gatov3.jpg" alt="Image 3"></div>
+            <div class="swiper-slide"><img src="gatov4.jpg" alt="Image 4"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <center>
+        <a href="" class="button_1719089702577" >
+            Я работник
+        </a>
+        <a href="" class="button_1719089702577" >
+            Я клиент
+        </a> 
+    </center>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>
